@@ -29,6 +29,10 @@ window.onload = function() {
 
     return quienCulpable + " " + queHizo + " " + quieresEvitar + " " + cuando;
   }
-  let mensajeExcusa = generadorMensaje();
-  document.getElementById("excusa").innerText = mensajeExcusa;
+
+  document.getElementById("generador").addEventListener("click", () => {
+    // Generar un nuevo mensaje cada vez que se haga clic
+    let mensajeExcusa = generadorMensaje();
+    document.getElementById("excusa").innerText = mensajeExcusa;
+  });
 };
