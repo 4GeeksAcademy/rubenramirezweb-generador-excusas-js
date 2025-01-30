@@ -22,12 +22,22 @@ window.onload = function() {
   }
 
   function generadorMensaje() {
-    let quienCulpable = who[indiceAleatorio(who.length)];
-    let queHizo = action[indiceAleatorio(action.length)];
-    let quieresEvitar = what[indiceAleatorio(what.length)];
-    let cuando = when[indiceAleatorio(when.length)];
+    let aleatorioWho = who[indiceAleatorio(who.length)];
+    let aleatorioAction = action[indiceAleatorio(action.length)];
+    let aleatorioWhat = what[indiceAleatorio(what.length)];
+    let aleatorioWhen = when[indiceAleatorio(when.length)];
 
-    return quienCulpable + " " + queHizo + " " + quieresEvitar + " " + cuando;
+    // return (
+    //   aleatorioWho +
+    //   " " +
+    //   aleatorioAction +
+    //   " " +
+    //   aleatorioWhat +
+    //   " " +
+    //   aleatorioWhen
+    // );
+
+    return `${aleatorioWho} ${aleatorioAction} ${aleatorioWhat} ${aleatorioWhen}`;
   }
 
   document.getElementById("generador").addEventListener("click", () => {
